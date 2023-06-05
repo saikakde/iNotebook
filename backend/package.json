@@ -1,15 +1,66 @@
 {
-  "name": "inotebook-backend",
-  "version": "1.0.0",
-  "description": "iNotebook - Your notebook on the cloud",
-  "main": "index.js",
-  "scripts": {
+  
+  
+    "name": "inotebook-backend",
+  
+  
+    "version": "1.0.0",
+  
+  
+    "description": "",
+  
+  
+    "main": "index.js",
+  
+  
+    "keywords": [],
+  
+  
+    "scripts": {
+  
+  
+      
+  
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  
+  
+    },
+  
+  
+    "author": "",
+  
+  
+    "license": "ISC",
+  
+  
+    "dependencies": {
+  
+  
+      
+  
     "express": "^4.18.2",
+  
+  
+      
+  
+    "express-validator": "^7.0.1",
+  
+  
+      
+  
     "mongoose": "^7.2.2"
-  }
+  
+  
+    },
+  
+  
+    "devDependencies": {
+  
+  
+      
+  
+    "nodemon": "^2.0.22"
+  
+  
+    }
 }
