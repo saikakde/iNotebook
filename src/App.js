@@ -1,25 +1,31 @@
 import './App.css';
-
+import {
+  Routes,
+  Route,  BrowserRouter,
+} from "react-router-dom";
+import Navbar from './components/Navbar';
+import { Home } from './components/Home';
+import About from './components/About';
+import NoteState from './context/notes/NoteState';
 function App() {
   return (
-    <div className="App">
-      {/* <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-       */}
-       <h1>this is iNotebook</h1>
-    </div>
-  );
+    <>
+    <NoteState>
+      <BrowserRouter>
+        <Navbar />
+        <div className="container">
+
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        </Routes>
+        </div>
+    </BrowserRouter>
+      </NoteState>
+    </>
+    
+      
+      );
 }
 
-export default App;
+      export default App;
