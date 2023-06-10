@@ -21,7 +21,7 @@ const Signup = (props) => {
           console.log(json)
           if (json.success) {
             // Save the auth token and redirect
-            localStorage.setItem('token', json.authtoken);
+            localStorage.setItem('token', json.authToken);
             navigate("/");
             props.showAlert("Account created Successfully","success")
 
@@ -35,6 +35,7 @@ const Signup = (props) => {
     }
     return (
         <div className='container'>
+            <h2>Create an account</h2>
             <form onSubmit={handleSubmit}>
             <div className="mb-3">
                 <label htmlFor="name" className="form-label">Name</label>

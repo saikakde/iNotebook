@@ -13,7 +13,8 @@ const NoteState = (props) => {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3ZjQ3ZTI2Y2RmZTkzNzBhZDc2NGU0In0sImlhdCI6MTY4NjIyMDU4MX0.q6GJXUlv3TNad06IPgwH36qjhvxcQKXmD7m2qU9Jwz4"
+        // "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3ZjQ3ZTI2Y2RmZTkzNzBhZDc2NGU0In0sImlhdCI6MTY4NjQzMDA5OH0.OLLOKW3liyv3xuczAmtEF-hyPwaXP-Tb9-R_tCxvPKI",
+        "auth-token":localStorage.getItem('token')
 
       }
     });
@@ -30,7 +31,8 @@ const NoteState = (props) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3ZjQ3ZTI2Y2RmZTkzNzBhZDc2NGU0In0sImlhdCI6MTY4NjIyMDU4MX0.q6GJXUlv3TNad06IPgwH36qjhvxcQKXmD7m2qU9Jwz4"
+        // "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3ZjQ3ZTI2Y2RmZTkzNzBhZDc2NGU0In0sImlhdCI6MTY4NjQzMDA5OH0.OLLOKW3liyv3xuczAmtEF-hyPwaXP-Tb9-R_tCxvPKI",
+        "auth-token":localStorage.getItem('token')
       },
       body: JSON.stringify({title, description, tag})
     });
@@ -59,7 +61,7 @@ const NoteState = (props) => {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3ZjQ3ZTI2Y2RmZTkzNzBhZDc2NGU0In0sImlhdCI6MTY4NjIyMDU4MX0.q6GJXUlv3TNad06IPgwH36qjhvxcQKXmD7m2qU9Jwz4"
+        "auth-token":localStorage.getItem('token')
       }
     });
     const json = response.json();
@@ -77,7 +79,7 @@ const NoteState = (props) => {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
-        "auth-token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjQ3ZjQ3ZTI2Y2RmZTkzNzBhZDc2NGU0In0sImlhdCI6MTY4NjIyMDU4MX0.q6GJXUlv3TNad06IPgwH36qjhvxcQKXmD7m2qU9Jwz4"
+        "auth-token":localStorage.getItem('token')
       },
       body: JSON.stringify({title, description, tag})
     });
